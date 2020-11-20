@@ -8,6 +8,7 @@ define view TotalSalesByClientView as
     select from salesorder.TblSalesOrderItem{
         salesOrder.client.ID as ![clientId],
         salesOrder.client.name as ![clientName],
+        salesOrder.createdAt as ![createdAt],
         sum(product.quantity * product.salesPrice) as ![totalSalesValor]
     }group by salesOrder.client.ID, salesOrder.client.name;
 

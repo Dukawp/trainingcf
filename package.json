@@ -18,6 +18,7 @@
         "start": "cds run",
         "env": "cp ./default-env.json ./db/default-env.json && cp ./default-env.json ./srv/default-env.json",
         "build": "cds build/all --clean"
+    	"deploydb": "cds build && cd db && npm start"
     },
     "cds": {
         "build": {
